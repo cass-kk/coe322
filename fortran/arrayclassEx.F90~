@@ -1,0 +1,27 @@
+Program norms
+  implicit none
+  integer :: i,j, row,column
+  integer, parameter :: M=3, N =4
+  real(4), dimension(3,4) :: mat = [((i*j, i=1,3), j=1,4)]
+  real(4) :: column_norm, row_norm, inf_norm, one_norm
+
+
+  print *,mat
+
+  !! Inf norm is max column- absolute sum
+  inf_norm = 0
+  do col=1, N
+    column_norm = 0
+    do row =1, M
+      column_norm = column_norm + abs(mat(row,col_))
+    end do
+  end do
+
+
+End Program norms
+
+
+!! the 1-norm is defined as maximum of all sums of absolute values in a ny column
+
+!! the infinity-norm is defined as the maximum row sum
+!! compute the sums while avoiding loops

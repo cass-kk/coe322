@@ -1,0 +1,10 @@
+Program readfort
+implicit none
+integer :: i
+integer :: x
+
+print *, "Type a number"
+read *,i
+x = 3*i
+print *,x
+End Program readfort

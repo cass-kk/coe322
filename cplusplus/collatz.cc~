@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main(){
+  int u;
+  int a;
+  int b;
+  cin >> u >> endl;
+  if(u%2 ==0){
+    a = u;
+  }else{
+    b=u;
+  }
+  int newu;
+  for(int i = 1; i <= 1000; i++){
+    a = (a/2);
+    b = (3*b +1);
+  }
+  cout << a << endl;
+  cout << b << endl;
+
+  return 0;
+}

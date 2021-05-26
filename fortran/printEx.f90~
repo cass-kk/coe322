@@ -1,0 +1,9 @@
+Program printing
+  implicit none
+  integer :: i
+  integer :: n
+  print *,((i*n, i=1,10),'/', n=1, 10)
+
+
+
+End Program printing

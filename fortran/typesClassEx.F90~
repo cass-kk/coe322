@@ -1,0 +1,10 @@
+Program angle_point
+  implicit none
+  type point
+     real :: x,y
+  end type point
+
+
+
+
+End Program angle_point

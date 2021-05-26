@@ -1,0 +1,62 @@
+#include <iostream>
+using namespace std;
+
+bool test_if_prime(int in){
+  for (int i = 2; i < in; i++){
+    if (in%i == 0 ){
+      return false;
+    }
+  }
+  return true;
+}
+
+void print_prime(int how_many){
+  int counter = 0, i = 0;
+  do {
+    if(test_if_prime(i)){
+      cout << i << endl;
+      counter++;
+    }
+    i++;
+  }while(counter < how_many);
+}
+
+int main(){
+  int how_many;
+  cin >> how_many;
+  print_prime(how_many);
+  return 0;
+}
+
+
+
+
+/*bool test_if_prime(int x) {
+  bool value = 1;
+  bool finish = 0;
+  for (int i = 2; i < x; i++) {
+    bool check(x % i == 0);
+    if (check) {
+      value = 0;
+      finish = 1;
+      break;
+    }
+    if (finish == 1) {
+      break;
+    }
+  }
+  return value;
+}
+
+int main() {
+
+  bool isprime = test_if_prime(13);
+  if (isprime == 1) {
+    cout << "entered value is prime" << endl;
+  }
+  else {
+    cout << "entered value is not prime" << endl;
+  }
+  return 0;
+}
+*/

@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+#include <cmath>;
+
+double distance (double x, double y){
+  double dist = sqrt((x - 0)^2 + (y - 0)^2);
+  return dist;
+}
+
+
+int main(){
+  cout << dist(1,0) << endl;
+  cout << dist(0,1) << endl;
+  cout << dist(1,1) << endl;
+  cout << dist(3,4) << endl;
+  return 0;
+}

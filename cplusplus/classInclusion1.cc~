@@ -1,0 +1,31 @@
+#include <iostream>
+using std::cout;
+using std::cin;
+using std::endl;
+
+class Rectangle{
+private:
+  float w;
+  float h;
+public:
+  Rectangle(double in_x, double in_y): w(in_x), h(in_y){};
+
+  float area(){
+    return (h*w);}
+  float right edge(){
+
+    return ;}
+  float topedge(){
+
+    return;}
+};
+
+
+int main(){
+  Point b1(4,5);
+  cout << "rectangle area is " << b1.area << endl;
+  cout << "rectangle right edge is " << b1.rightedge << endl;
+  cout << "rectangle top edge is " << b1.topedge << endl;
+
+  return 0;
+}

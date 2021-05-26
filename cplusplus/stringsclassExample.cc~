@@ -1,0 +1,22 @@
+#include <iostream>
+#include <cmath>
+
+using std::cout;
+using std::cin;
+using std::endl;
+
+
+int main(){
+
+  int ichar;
+  cout << "the manieth character?" << endl;
+  cin >> ichar;
+
+  char chari = ichar;
+  cout << "the " << ichar << " -th char is "<<
+  cout << chari << endl;
+
+
+
+  return 0;
+}
