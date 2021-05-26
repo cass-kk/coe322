@@ -1,0 +1,75 @@
+Program find_area    !Program to find the area of a rectangle given two antiparallel points
+  implicit none
+
+  type point         !Define the type to hold the x and y values
+     real(4) :: x,y
+  end type point
+
+  type rectangle     !Define the type to hold two points
+     type(point) :: lleft, rright
+  end type rectangle
+  
+  type(point) :: leftPT, rightPT !Declare objects of the type
+  type(rectangle) :: numbers
+
+  real(4) :: x1, y1, x2, y2
+  read *, x1, y1
+  read *, x2, y2
+
+  leftPT = point(x1, y1)  !initialize the objects
+  rightPT = point(x2, y2)
+
+  numbers = rectangle(leftPT, rightPT)
+
+  print *, area(numbers)
+
+  contains
+    real(4) function area(rect)
+      implicit none
+      Type(rectangle), intent(in) :: rect
+      area = (rightPT%x - leftPT%x)*(rightPT%y - leftPT%y)  !value of area is returned as real(4)
+    end function area
+
+End Program find_area
+
+
+
+
+! BELOW IS CODE IN A MODULE; HAVING PROBLEMS WITH THE COMPILER
+
+!Module Points
+!  type point
+!     real(4) :: x,y
+!  end type point
+
+!  type rectangle
+!     type(point) :: lleft, rright
+!  end type rectangle
+
+!contains
+!  real(4) function area(rect)
+!    implicit none
+!    Type(rectangle), intent(in) :: rect
+!    area = (rightPT%x - leftPT%x)*(rightPT%y - leftPT%y)
+!  end function area
+!end Module Points
+
+!Program find_area
+!  use Points
+!  implicit none
+
+!  type(point) :: leftPT, rightPT
+!  type(rectangle) :: numbers
+
+!  real(4) :: x1, y1, x2, y2
+!  read *, x1, y1
+!  read *, x2, y2
+
+!  leftPT = point(x1, y1)
+!  rightPT = point(x2, y2)
+
+!  numbers = rectangle(leftPT, rightPT)
+
+!  print *, "Area: ", area(numbers)
+
+!End Program find_area

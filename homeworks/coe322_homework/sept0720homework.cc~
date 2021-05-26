@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+  int a;
+  do{
+    cout << "Please input a postitive integer: " << endl;
+    cin >> a;
+  }while (a <= 0);
+
+  if (a%3 == 0 && a%5 == 0){
+    cout << "Fizzbuzz!" << endl;
+  }else if (a%3 == 0){
+    cout << "Fizz!" << endl;
+  }else if (a%5 == 0){
+    cout << "Buzz!" << endl;
+  }
+  return 0;
+}

@@ -1,0 +1,34 @@
+#include <iostream>
+using std::cout;
+using std::endl;
+using std::cin;
+
+bool test_if_prime(int a){
+  for (int i = 2; i < a; i++){
+    if (a == 2){
+      return false;
+    }else if(a % i == 0){
+      return false;
+    }
+  }
+  return true;
+}
+
+void manyPrimes(int how_many){
+  int manyCounter = 0, i = 2;
+  do{
+    if(test_if_prime(i)){
+      cout << i << endl;
+      manyCounter++;
+    }
+    i++;
+  } while(manyCounter < how_many);
+}
+
+
+int main(){
+  int n;
+  cin >> n;
+  manyPrimes(n);
+  return 0;
+}
